@@ -1,0 +1,265 @@
+/* ============================================================
+           ABOUT US PAGE
+           ============================================================ */
+        .about-page {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: var(--bg-body);
+            z-index: 998;
+            overflow-y: auto;
+            animation: slideInRight 300ms ease;
+        }
+        .about-page.active {
+            display: block;
+        }
+        .about-header {
+            position: sticky;
+            top: 0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 20px;
+            background: var(--bg-header);
+            color: #fff;
+            z-index: 10;
+        }
+        .about-back-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+        }
+        .about-back-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .about-header h2 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px 20px 40px;
+        }
+
+        /* Hero Section */
+        .about-hero {
+            text-align: center;
+            padding: 32px 20px;
+            background: var(--bg-card);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+        .about-hero-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #fff;
+            box-shadow: 0 8px 24px rgba(42, 127, 207, 0.3);
+        }
+        .about-hero-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .about-hero-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Sections */
+        .about-section {
+            margin-bottom: 28px;
+        }
+        .about-section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+        }
+        .about-section-title i {
+            color: var(--accent);
+        }
+        .about-paragraph {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        /* Checklist */
+        .about-checklist {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
+        }
+        .about-check-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: var(--bg-card);
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            transition: 0.2s;
+        }
+        .about-check-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(10, 30, 50, 0.12);
+        }
+        .about-check-item i {
+            color: var(--success);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .about-check-item span {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Features Grid */
+        .about-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+        .about-feature-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            transition: 0.25s;
+        }
+        .about-feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(10, 30, 50, 0.15);
+            border-color: var(--accent);
+        }
+        .about-feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 14px;
+        }
+        .about-feature-card h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        .about-feature-card p {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Mission Section */
+        .about-mission {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 28px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+        }
+        .about-mission .about-section-title {
+            border-bottom-color: var(--accent);
+            margin-bottom: 18px;
+        }
+        .about-mission-text {
+            font-size: 1rem;
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-weight: 500;
+            margin-bottom: 14px;
+            padding: 16px;
+            background: var(--input-bg);
+            border-radius: 14px;
+            border-left: 4px solid var(--accent);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 700px) {
+            .about-content {
+                padding: 16px 14px 32px;
+            }
+            .about-hero {
+                padding: 24px 16px;
+            }
+            .about-hero-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.6rem;
+            }
+            .about-hero-title {
+                font-size: 1.2rem;
+            }
+            .about-hero-subtitle {
+                font-size: 0.85rem;
+            }
+            .about-section-title {
+                font-size: 1rem;
+            }
+            .about-checklist {
+                grid-template-columns: 1fr;
+            }
+            .about-features-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-mission {
+                padding: 20px 16px;
+            }
+            .about-mission-text {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+        }
+        @media (max-width: 460px) {
+            .about-header h2 {
+                font-size: 1rem;
+            }
+            .about-hero-title {
+                font-size: 1.05rem;
+            }
+            .about-feature-card {
+                padding: 16px;
+            }
+        }

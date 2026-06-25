@@ -49,6 +49,15 @@ function initNavigation() {
 
     // Initialize settings page events
     initSettingsPage();
+
+    // Initialize about page back button
+    const aboutBackBtn = document.getElementById('aboutBackBtn');
+    if (aboutBackBtn) {
+        aboutBackBtn.addEventListener('click', () => {
+            document.getElementById('aboutPage').classList.remove('active');
+            navigateToPage('home');
+        });
+    }
 }
 
 function toggleDrawer() {
@@ -81,13 +90,19 @@ function navigateToPage(page) {
 
     // Show/hide settings page
     const settingsPage = document.getElementById('settingsPage');
+    const aboutPage = document.getElementById('aboutPage');
     const dashboard = document.getElementById('dashboard');
 
     if (page === 'settings') {
         loadSettingsForm();
         settingsPage.classList.add('active');
+        aboutPage.classList.remove('active');
+    } else if (page === 'about') {
+        aboutPage.classList.add('active');
+        settingsPage.classList.remove('active');
     } else {
         settingsPage.classList.remove('active');
+        aboutPage.classList.remove('active');
     }
 
     // Scroll to section if on dashboard

@@ -13,7 +13,8 @@ const COMPONENTS = [
     ['insight-card', 'components/insight-card.html'],
     ['io-bar', 'components/io-bar.html'],
     ['footer', 'components/footer.html'],
-    ['settings-page', 'components/settings-page.html']
+    ['settings-page', 'components/settings-page.html'],
+    ['about-page', 'components/about-page.html']
 ];
 
 const SCRIPTS = [
