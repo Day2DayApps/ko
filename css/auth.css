@@ -1,0 +1,293 @@
+#authOverlay .modal-box { max-width: 400px; }
+        #authOverlay input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background: var(--input-bg);
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            outline: none;
+        }
+        #authOverlay input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(42, 127, 207, 0.15);
+        }
+        #authOverlay .btn-primary { width: 100%; padding: 12px; }
+        #authError { color: #ef4444; font-size: 0.8rem; text-align: center; margin-bottom: 8px; }
+
+        .auth-modal { max-width: 520px; }
+        .auth-modal .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .auth-tabs,
+        .login-methods {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            justify-content: center;
+        }
+        .auth-tabs {
+            background: var(--input-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 6px;
+        }
+        .auth-tab-btn,
+        .login-method-btn {
+            border: 1px solid transparent;
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+        .auth-tab-btn {
+            flex: 1;
+            border-radius: 12px;
+            padding: 10px 12px;
+        }
+        .login-method-btn {
+            border-color: var(--border-color);
+            border-radius: 999px;
+            padding: 7px 14px;
+            font-size: 0.78rem;
+            background: var(--input-bg);
+        }
+        .auth-tab-btn.active,
+        .login-method-btn.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+        .auth-form-title {
+            color: var(--text-primary);
+            font-size: 1.15rem;
+            text-align: center;
+            margin: 8px 0 16px;
+        }
+        .login-method-content,
+        .step-content {
+            display: none;
+        }
+        .login-method-content.active,
+        .step-content.active {
+            display: block;
+        }
+        .step-description {
+            color: var(--text-secondary);
+            font-size: 0.86rem;
+            line-height: 1.45;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .telegram-bot-btn {
+            align-items: center;
+            background: #0088cc;
+            border-radius: 12px;
+            color: #fff;
+            display: inline-flex;
+            font-weight: 700;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 12px;
+            padding: 11px 16px;
+            text-decoration: none;
+            width: 100%;
+        }
+        .telegram-instructions {
+            background: var(--input-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin: 0 0 14px;
+            padding: 10px 14px;
+        }
+        .telegram-instructions li {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            list-style: none;
+            padding: 3px 0;
+        }
+        .telegram-instructions li::before {
+            color: var(--accent);
+            content: "> ";
+            font-weight: 800;
+        }
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0 22px;
+        }
+        .step-indicator .step {
+            align-items: center;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .step-num {
+            align-items: center;
+            background: var(--input-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            color: var(--text-muted);
+            display: flex;
+            font-size: 0.8rem;
+            font-weight: 800;
+            height: 32px;
+            justify-content: center;
+            width: 32px;
+        }
+        .step-label {
+            color: var(--text-muted);
+            font-size: 0.62rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .step.active .step-num,
+        .step.done .step-num {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+        .step.done .step-num {
+            background: var(--success);
+            border-color: var(--success);
+        }
+        .otp-input-group {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin: 14px 0 10px;
+        }
+        .otp-input-group input {
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 1.25rem;
+            font-weight: 800;
+            height: 48px;
+            padding: 0;
+            text-align: center;
+            width: 42px;
+        }
+        .otp-input-group input.filled {
+            border-color: var(--success);
+        }
+        .resend-timer {
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            margin: 6px 0 10px;
+            text-align: center;
+        }
+        .resend-btn {
+            background: none;
+            border: 0;
+            color: var(--accent);
+            cursor: pointer;
+            font-weight: 700;
+            margin-left: 6px;
+        }
+        .resend-btn:disabled {
+            color: var(--text-muted);
+            cursor: not-allowed;
+        }
+        .password-strength {
+            background: var(--border-color);
+            border-radius: 999px;
+            height: 4px;
+            margin: -6px 0 6px;
+            overflow: hidden;
+        }
+        .strength-bar { height: 100%; width: 0; }
+        .strength-bar.weak { background: #ef4444; width: 33%; }
+        .strength-bar.medium { background: #f59e0b; width: 66%; }
+        .strength-bar.strong { background: #10b981; width: 100%; }
+        .password-requirements {
+            color: var(--text-muted);
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 0.72rem;
+            gap: 6px 12px;
+            margin-bottom: 10px;
+        }
+        .password-requirements .check { opacity: 0.3; }
+        .password-requirements .check.met { opacity: 1; color: var(--success); }
+        .auth-toggle,
+        .auth-guest {
+            color: var(--text-muted);
+            font-size: 0.84rem;
+            margin-top: 14px;
+            text-align: center;
+        }
+        .auth-toggle a,
+        .auth-guest a {
+            color: var(--accent);
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .auth-guest a { color: var(--text-muted); }
+
+        /* Mobile fixes for auth modal */
+        @media (max-width: 700px) {
+            #authOverlay {
+                padding: 10px;
+                align-items: flex-start;
+                justify-content: center;
+            }
+            #authOverlay .modal-box {
+                max-width: 95%;
+                width: 95%;
+                padding: 16px 12px;
+                margin-top: 10px;
+            }
+            .auth-tabs {
+                flex-direction: row;
+            }
+            .auth-tab-btn {
+                padding: 8px 10px;
+                font-size: 0.85rem;
+            }
+            .login-methods {
+                flex-wrap: wrap;
+            }
+            .login-method-btn {
+                font-size: 0.7rem;
+                padding: 5px 10px;
+            }
+            .step-indicator {
+                margin: 6px 0 16px;
+            }
+            .step-num {
+                width: 28px;
+                height: 28px;
+                font-size: 0.7rem;
+            }
+            .step-label {
+                font-size: 0.55rem;
+            }
+            .otp-input-group {
+                gap: 6px;
+            }
+            .otp-input-group input {
+                width: 36px;
+                height: 42px;
+                font-size: 1.1rem;
+            }
+        }
+        @media (max-width: 460px) {
+            .auth-form-title {
+                font-size: 1rem;
+            }
+            .telegram-instructions {
+                padding: 8px 10px;
+            }
+            .telegram-instructions li {
+                font-size: 0.72rem;
+            }
+        }

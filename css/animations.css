@@ -1,0 +1,39 @@
+/* ============================================================
+           STAGE DARK
+           ============================================================ */
+        .fx-stage-dark {
+            background: #0b1020;
+            border-radius: var(--radius);
+            padding: 12px 24px;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+/* ============================================================
+           TITLE — REVEAL MASK
+           ============================================================ */
+        .fx-text-reveal-mask {
+            position: relative;
+            margin: 0;
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.1);
+            display: inline-block;
+        }
+        .fx-text-reveal-mask::before {
+            content: attr(data-text);
+            position: absolute;
+            inset: 0;
+            color: #fff;
+            background: linear-gradient(90deg, #8b5cf6, #ec4899, #f59e0b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            clip-path: inset(0 100% 0 0);
+            animation: fx-mask-reveal 2.5s ease-in-out infinite;
+        }
+        @keyframes fx-mask-reveal {
+            0%, 100% { clip-path: inset(0 100% 0 0); }
+            50%      { clip-path: inset(0 0 0 0); }
+        }

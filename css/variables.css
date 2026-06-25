@@ -1,0 +1,133 @@
+/* ============================================================
+           CSS VARIABLES — THEME ENGINE
+           ============================================================ */
+        :root {
+            --bg-body: #f0f4f9;
+            --bg-card: #ffffff;
+            --bg-header: linear-gradient(145deg, #0b2a4a, #1a3f63);
+            --text-primary: #0b2a4a;
+            --text-secondary: #1f3a57;
+            --text-muted: #5e6f88;
+            --border-color: #e9edf4;
+            --shadow: 0 8px 24px rgba(10, 30, 50, 0.08);
+            --input-bg: #f9fcff;
+            --table-header: #f8faff;
+            --chip-bg: #dce5f0;
+            --chip-text: #1f405e;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --ring-bg: #e5ebf3;
+            --ring-fg: #2a7fcf;
+            --accent: #2a7fcf;
+            --accent-light: #4a9eff;
+            --radius: 20px;
+            --transition: 0.25s ease;
+            --toast-bg: #1e293b;
+            --toast-text: #f8fafc;
+            --success: #1d7a3e;
+            --warning: #b06b1e;
+            --danger: #b02b2b;
+        }
+
+        body.theme-dark {
+            --bg-body: #121826;
+            --bg-card: #1e2638;
+            --bg-header: linear-gradient(145deg, #0b1a2e, #1a2a42);
+            --text-primary: #e8edf5;
+            --text-secondary: #c8d2e6;
+            --text-muted: #8a9bb8;
+            --border-color: #2e3a50;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            --input-bg: #2a344a;
+            --table-header: #1a2538;
+            --chip-bg: #2e3a50;
+            --chip-text: #c8d2e6;
+            --glass-bg: rgba(30, 38, 56, 0.8);
+            --glass-border: rgba(255, 255, 255, 0.06);
+            --ring-bg: #2e3a50;
+            --ring-fg: #4a9eff;
+            --accent: #4a9eff;
+            --accent-light: #7ab8ff;
+            --toast-bg: #2d3748;
+            --toast-text: #f8fafc;
+        }
+        body.theme-purple {
+            --bg-body: #f5f0ff;
+            --bg-card: #ffffff;
+            --bg-header: linear-gradient(145deg, #4c1d95, #7c3aed);
+            --accent: #7c3aed;
+            --accent-light: #a78bfa;
+            --ring-fg: #7c3aed;
+        }
+        body.theme-purple.theme-dark {
+            --bg-body: #1a1028;
+            --bg-card: #251838;
+            --bg-header: linear-gradient(145deg, #2d1b4e, #4c1d95);
+            --accent: #8b5cf6;
+            --accent-light: #a78bfa;
+            --ring-fg: #8b5cf6;
+        }
+        body.theme-blue {
+            --bg-body: #f0f7ff;
+            --bg-card: #ffffff;
+            --bg-header: linear-gradient(145deg, #1e40af, #3b82f6);
+            --accent: #3b82f6;
+            --accent-light: #60a5fa;
+            --ring-fg: #3b82f6;
+        }
+        body.theme-blue.theme-dark {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --bg-header: linear-gradient(145deg, #1e3a5f, #1e40af);
+            --accent: #60a5fa;
+            --accent-light: #93bbfc;
+            --ring-fg: #60a5fa;
+        }
+        body.theme-emerald {
+            --bg-body: #f0fdf4;
+            --bg-card: #ffffff;
+            --bg-header: linear-gradient(145deg, #065f46, #10b981);
+            --accent: #10b981;
+            --accent-light: #34d399;
+            --ring-fg: #10b981;
+        }
+        body.theme-emerald.theme-dark {
+            --bg-body: #0f1a14;
+            --bg-card: #1a2a22;
+            --bg-header: linear-gradient(145deg, #0a3d2e, #065f46);
+            --accent: #34d399;
+            --accent-light: #6ee7b7;
+            --ring-fg: #34d399;
+        }
+        body.theme-rose {
+            --bg-body: #fff1f2;
+            --bg-card: #ffffff;
+            --bg-header: linear-gradient(145deg, #9f1239, #e11d48);
+            --accent: #e11d48;
+            --accent-light: #fb7185;
+            --ring-fg: #e11d48;
+        }
+        body.theme-rose.theme-dark {
+            --bg-body: #1a0e12;
+            --bg-card: #2a1820;
+            --bg-header: linear-gradient(145deg, #4c0d20, #9f1239);
+            --accent: #fb7185;
+            --accent-light: #fda4af;
+            --ring-fg: #fb7185;
+        }
+        body.theme-amber {
+            --bg-body: #fffbeb;
+            --bg-card: #ffffff;
+            --bg-header: linear-gradient(145deg, #92400e, #f59e0b);
+            --accent: #f59e0b;
+            --accent-light: #fbbf24;
+            --ring-fg: #f59e0b;
+        }
+        body.theme-amber.theme-dark {
+            --bg-body: #1a1508;
+            --bg-card: #2a2212;
+            --bg-header: linear-gradient(145deg, #4a3308, #92400e);
+            --accent: #fbbf24;
+            --accent-light: #fcd34d;
+            --ring-fg: #fbbf24;
+        }

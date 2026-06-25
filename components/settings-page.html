@@ -1,0 +1,112 @@
+<div class="settings-page" id="settingsPage">
+    <div class="settings-header">
+        <button class="settings-back-btn" id="settingsBackBtn">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <h2>Settings</h2>
+    </div>
+    <div class="settings-content">
+        <div class="settings-section">
+            <h3 class="settings-section-title"><i class="fas fa-user"></i> Profile Information</h3>
+            <div class="settings-card">
+                <div class="settings-field">
+                    <label for="settingsUsername">Username</label>
+                    <input type="text" id="settingsUsername" placeholder="Enter your username" />
+                </div>
+                <div class="settings-field">
+                    <label for="settingsFullName">Full Name</label>
+                    <input type="text" id="settingsFullName" placeholder="Enter your full name" />
+                </div>
+                <div class="settings-field">
+                    <label for="settingsAge">Age</label>
+                    <input type="number" id="settingsAge" min="10" max="100" placeholder="Enter your age" />
+                </div>
+            </div>
+        </div>
+        <div class="settings-section">
+            <h3 class="settings-section-title"><i class="fab fa-telegram"></i> Telegram Information</h3>
+            <div class="settings-card">
+                <div class="settings-field">
+                    <label for="settingsTelegramUsername">Telegram Username</label>
+                    <input type="text" id="settingsTelegramUsername" placeholder="@username" readonly />
+                    <span class="settings-field-hint">Linked to your Telegram account</span>
+                </div>
+                <div class="settings-field">
+                    <label for="settingsTelegramId">Telegram User ID</label>
+                    <input type="text" id="settingsTelegramId" placeholder="Not linked" readonly />
+                    <span class="settings-field-hint">Your unique Telegram identifier</span>
+                </div>
+            </div>
+        </div>
+        <div class="settings-section">
+            <h3 class="settings-section-title"><i class="fas fa-bullseye"></i> Exam Preferences</h3>
+            <div class="settings-card">
+                <div class="settings-field">
+                    <label for="settingsTargetExam">Target Exam</label>
+                    <select id="settingsTargetExam">
+                        <option value="SBI PO">SBI PO</option>
+                        <option value="IBPS PO">IBPS PO</option>
+                        <option value="IBPS Clerk">IBPS Clerk</option>
+                        <option value="RRB PO">RRB PO</option>
+                        <option value="RRB Clerk">RRB Clerk</option>
+                        <option value="SSC CGL">SSC CGL</option>
+                        <option value="SSC CHSL">SSC CHSL</option>
+                        <option value="Railway">Railway</option>
+                        <option value="UPSC">UPSC</option>
+                        <option value="CAPF">CAPF</option>
+                        <option value="Custom">Custom</option>
+                    </select>
+                </div>
+                <div class="settings-field custom-exam-field" style="display:none;">
+                    <label for="settingsCustomExam">Custom Exam Name</label>
+                    <input type="text" id="settingsCustomExam" placeholder="Enter exam name" />
+                </div>
+            </div>
+        </div>
+        <div class="settings-section">
+            <h3 class="settings-section-title"><i class="fas fa-heart"></i> Interested In</h3>
+            <div class="settings-card">
+                <div class="settings-checkboxes">
+                    <label class="settings-checkbox">
+                        <input type="checkbox" id="interestQuant" />
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-label">Quant</span>
+                    </label>
+                    <label class="settings-checkbox">
+                        <input type="checkbox" id="interestReasoning" />
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-label">Reasoning</span>
+                    </label>
+                    <label class="settings-checkbox">
+                        <input type="checkbox" id="interestEnglish" />
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-label">English</span>
+                    </label>
+                    <label class="settings-checkbox">
+                        <input type="checkbox" id="interestGA" />
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-label">General Awareness</span>
+                    </label>
+                    <label class="settings-checkbox">
+                        <input type="checkbox" id="interestCurrentAffairs" />
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-label">Current Affairs</span>
+                    </label>
+                    <label class="settings-checkbox">
+                        <input type="checkbox" id="interestComputer" />
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-label">Computer</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="settings-actions">
+            <button class="settings-btn settings-btn-primary" id="settingsSaveBtn">
+                <i class="fas fa-save"></i> Save Changes
+            </button>
+            <button class="settings-btn settings-btn-secondary" id="settingsResetBtn">
+                <i class="fas fa-undo"></i> Reset
+            </button>
+        </div>
+    </div>
+</div>

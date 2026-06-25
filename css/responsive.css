@@ -1,0 +1,47 @@
+/* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 700px) {
+            .phase-body .col-header,
+            .course-accordion .phase-body .day-row {
+                grid-template-columns: 28px 64px 1fr 28px 28px 72px 40px 26px;
+                font-size: 0.65rem;
+                padding: 4px 6px;
+                gap: 2px;
+            }
+            .course-accordion .phase-body .day-row .d-date { font-size: 0.5rem; }
+            .course-accordion .phase-body .day-row .d-score input { width: 30px; font-size: 0.55rem; }
+            .header-left .fx-text-reveal-mask { font-size: 18px; letter-spacing: 2px; }
+            .dash-card .card-value { font-size: 1.3rem; }
+            .ring-wrap { width: 60px; height: 60px; }
+            .ring-wrap svg { width: 60px; height: 60px; }
+            .ring-wrap .ring-center { font-size: 0.9rem; }
+            .stats-mini { grid-template-columns: repeat(3, 1fr); }
+            .countdown-card .cd-numbers .cd-item { padding: 8px 10px; }
+            .countdown-card .cd-numbers .cd-item .cd-num { font-size: 1.2rem; }
+            .countdown-card .cd-exam-name { font-size: 0.9rem; }
+            .fx-form-input { max-width: 100%; }
+            .io-bar .fx-hover-water { padding: 8px 18px; font-size: 12px; }
+            .modal-box { padding: 18px 16px; max-width: 95%; margin: 10px; }
+            .modal-overlay { padding: 10px; align-items: flex-start; padding-top: 20px; }
+            .theme-grid { grid-template-columns: repeat(3, 1fr); }
+            .fx-text-typewriter { font-size: 0.85rem; }
+            .insight-text { font-size: 0.8rem; }
+            .streak-readiness-row { gap: 10px; }
+        }
+        @media (max-width: 460px) {
+            .phase-body .col-header,
+            .course-accordion .phase-body .day-row {
+                grid-template-columns: 22px 50px 1fr 22px 22px 56px 30px 20px;
+                font-size: 0.55rem;
+                padding: 3px 4px;
+            }
+            .course-accordion .phase-body .day-row .d-date { font-size: 0.45rem; }
+            .header { padding: 10px 12px; }
+            .header-left .fx-text-reveal-mask { font-size: 15px; letter-spacing: 1px; }
+            .dash-card { padding: 12px 12px; margin-bottom: 10px; }
+            .fx-text-typewriter { font-size: 0.75rem; }
+            .countdown-card .cd-numbers .cd-item { padding: 6px 8px; }
+            .countdown-card .cd-numbers .cd-item .cd-num { font-size: 1rem; }
+            .countdown-card .cd-numbers { gap: 6px; }
+        }

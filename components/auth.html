@@ -1,0 +1,122 @@
+<div id="authOverlay" class="modal-overlay show">
+    <div class="modal-box auth-modal">
+        <div class="auth-tabs">
+            <button class="auth-tab-btn active" data-auth-tab="login">Login</button>
+            <button class="auth-tab-btn" data-auth-tab="register">Register</button>
+        </div>
+
+        <div id="authError" class="auth-status"></div>
+
+        <div id="loginForm">
+            <h3 class="auth-form-title">Welcome Back</h3>
+            <div class="login-methods">
+                <button class="login-method-btn active" data-login-method="password">Username / Email</button>
+                <button class="login-method-btn" data-login-method="telegram">Telegram OTP</button>
+            </div>
+
+            <div class="login-method-content active" data-login-panel="password">
+                <input type="text" id="authUsername" placeholder="Username or email" />
+                <input type="password" id="authPassword" placeholder="Password" />
+                <button class="btn-primary" id="authSubmit">Login</button>
+            </div>
+
+            <div class="login-method-content" data-login-panel="telegram">
+                <p class="step-description">
+                    <i class="fab fa-telegram-plane"></i> Enter your linked numeric Telegram user ID to receive an OTP.
+                </p>
+                <input type="text" id="loginTelegramIdInput" placeholder="Numeric Telegram User ID" />
+                <button class="btn-primary" id="loginSendOtpBtn"><i class="fas fa-paper-plane"></i> Send Login OTP</button>
+                <div class="otp-input-group" id="loginOtpGroup">
+                    <input type="text" maxlength="1" class="login-otp-input" />
+                    <input type="text" maxlength="1" class="login-otp-input" />
+                    <input type="text" maxlength="1" class="login-otp-input" />
+                    <input type="text" maxlength="1" class="login-otp-input" />
+                    <input type="text" maxlength="1" class="login-otp-input" />
+                    <input type="text" maxlength="1" class="login-otp-input" />
+                </div>
+                <div class="resend-timer">
+                    <span id="loginResendTimer">Resend available in <span id="loginResendCountdown">60</span>s</span>
+                    <button class="resend-btn" id="loginResendOtpBtn" disabled>Resend OTP</button>
+                </div>
+                <button class="btn-primary" id="loginVerifyOtpBtn"><i class="fas fa-check"></i> Login with OTP</button>
+                <div class="auth-status" id="loginOtpStatus"></div>
+            </div>
+
+            <div class="auth-toggle">
+                <a id="forgotPasswordLink">Forgot password?</a>
+            </div>
+        </div>
+
+        <div id="registerForm" style="display:none;">
+            <h3 class="auth-form-title">Create Your Account</h3>
+            <div class="step-content active" data-step="1">
+                <div class="step-indicator">
+                    <div class="step active" data-step="1"><span class="step-num">1</span><span class="step-label">Telegram</span></div>
+                    <div class="step" data-step="2"><span class="step-num">2</span><span class="step-label">OTP</span></div>
+                    <div class="step" data-step="3"><span class="step-num">3</span><span class="step-label">Password</span></div>
+                </div>
+                <a href="https://t.me/QuantTrackerBot" target="_blank" class="telegram-bot-btn">
+                    <i class="fab fa-telegram-plane"></i> Open Telegram Bot
+                </a>
+                <div class="telegram-instructions">
+                    <li>Type <code>/start</code> in the bot</li>
+                    <li>Copy your numeric Telegram User ID</li>
+                    <li>Paste it below</li>
+                </div>
+                <input type="text" id="regTelegramIdInput" placeholder="Numeric Telegram User ID" />
+                <button class="btn-primary" id="sendOtpBtn"><i class="fas fa-paper-plane"></i> Send OTP</button>
+                <div class="auth-status" id="otpStatus"></div>
+            </div>
+
+            <div class="step-content" data-step="2">
+                <div class="step-indicator">
+                    <div class="step done" data-step="1"><span class="step-num">✓</span><span class="step-label">Telegram</span></div>
+                    <div class="step active" data-step="2"><span class="step-num">2</span><span class="step-label">OTP</span></div>
+                    <div class="step" data-step="3"><span class="step-num">3</span><span class="step-label">Password</span></div>
+                </div>
+                <div class="otp-input-group">
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                </div>
+                <div class="resend-timer">
+                    <span id="resendTimer">Resend available in <span id="resendCountdown">60</span>s</span>
+                    <button class="resend-btn" id="resendOtpBtn" disabled>Resend OTP</button>
+                </div>
+                <button class="btn-primary" id="verifyOtpBtn"><i class="fas fa-check"></i> Verify OTP</button>
+                <div class="auth-status" id="otpVerifyStatus"></div>
+            </div>
+
+            <div class="step-content" data-step="3">
+                <div class="step-indicator">
+                    <div class="step done" data-step="1"><span class="step-num">✓</span><span class="step-label">Telegram</span></div>
+                    <div class="step done" data-step="2"><span class="step-num">✓</span><span class="step-label">OTP</span></div>
+                    <div class="step active" data-step="3"><span class="step-num">3</span><span class="step-label">Password</span></div>
+                </div>
+                <input type="text" id="usernameInput" placeholder="Username" />
+                <input type="email" id="emailInput" placeholder="Email address" />
+                <input type="password" id="passwordInput" placeholder="Password, minimum 8 characters" />
+                <div class="password-strength"><div class="strength-bar" id="strengthBar"></div></div>
+                <div class="password-requirements">
+                    <span class="req"><span class="check" id="reqLength">✓</span> 8+ chars</span>
+                    <span class="req"><span class="check" id="reqUpper">✓</span> uppercase</span>
+                    <span class="req"><span class="check" id="reqNumber">✓</span> number</span>
+                </div>
+                <input type="password" id="confirmPasswordInput" placeholder="Confirm password" />
+                <button class="btn-primary" id="registerBtn"><i class="fas fa-user-plus"></i> Register</button>
+                <div class="auth-status" id="registerStatus"></div>
+            </div>
+        </div>
+
+        <div class="auth-toggle">
+            <span id="authSwitchText">Don't have an account?</span>
+            <a id="authSwitchLink">Register</a>
+        </div>
+        <div class="auth-guest">
+            <a id="guestModeLink">Continue as Guest</a>
+        </div>
+    </div>
+</div>
